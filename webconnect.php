@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require("config.php");
     
     header('Content-Type: application/json');
@@ -17,18 +18,34 @@
         }
         
         $req = $bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
-        $req->exec(array("pseudo"=>$username));
-        $req->fetch();
+        $req->execute(array("pseudo"=>$username));
+        $data = $req->fetch();
         
-        if($req == NULL) {
+        if($data == NULL) {
             $answer["status"] = "error";
             $answer["message"] = "Wrong username or password";
+        }
+        else {
+            $passBDD = $data["mdp"];
+            
+            if(hash_equals($passBDD, crypt($password, $passBDD))){
+                $answer["status"] = "ok";
+                $answer["message"] = "Connected !";
+                $answer["pseudo"] = $data["pseudo"];
+                $answer["description"] = $data["description"]; 
+                $answer["email"] = $data["email"];
+                
+                $_SESSION["ident"] = json_encode($answer);
+            }
+            else {
+                $answer["status"] = "error";
+                $answer["message"] = "Wrong username or password";     
+            }
         }
         
         
     }
-    else
-    {
+    else {
         $answer["status"] = "error";
         $answer["message"] = "Unable to find require datas";
     }
