@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link id="main_style" type="text/css" rel="stylesheet" href="../css/inscription.css" />
+
+</head>
+<body>
+    <h1>Inscription au service d'évênements</h1>
+
+    <form method ='post' action ="inscription.php">
+        <ul>
+
+            <li class="droite">
+                <label> Nom d'utilisateur : </label><br />
+                <input type="text" name="username" maxlength="16" pattern="[A-Za-z0-9].{4,}" placeholder="min:4 max:16" required formnovalidate>
+            </li>
+            <li class="droite">
+                <label> Mot de passe : </label><br />
+                <input type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="min:8 1upper 1lower 1num" required formnovalidate>
+            </li>
+            <li class="droite">
+                <label> Répéter Mot de passe : </label><br />
+                <input type="password" name="mdp2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Répéter votre mot de passe" required>
+            </li>
+            <li class="gauche">
+                <label> Description <font size="1" >(facultative)</font> : </label><br />
+                <textarea name="description" rows="8" cols="100" maxlength="2500" placeholder="Votre description..."></textarea><br />
+                <input type="submit" name="submit_button" value="S'inscrire">
+            </li>
+        </ul>
+    </form>
+</body>
