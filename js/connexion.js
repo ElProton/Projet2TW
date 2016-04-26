@@ -1,6 +1,9 @@
 function init() {
     var button = document.querySelector("#connect");
-    button.addEventListener("click", connect);
+    
+    if(button !== null) {
+        button.addEventListener("click", connect);
+    }
 }
 
 function connect() {
