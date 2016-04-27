@@ -1,0 +1,62 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+}
+
+ul{
+    list-style: none;
+}
+
+.droite{
+
+}
+
+.gauche{
+    position: absolute;
+    left: 35%;
+    top: 20%;
+
+
+}
+
+h1{
+    position: relative;
+    padding-top: 2%;
+}
+
+.droite{
+    position: relative;
+    padding: 1%;
+}
+
+header {
+    background-color: rgb(255, 224, 100);
+    padding: 10px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+#connection_form input, #connection_form button{
+    border-radius: 10px;
+    height: 20px;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 150px;
+    pargin-left: 10px;
+}
