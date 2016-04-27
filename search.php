@@ -31,7 +31,7 @@
             array_push($where, "date>=".$_GET["dateMax"]);
         }
         if(isset($_GET["from"]) && trim($_GET["from"]) != ""){
-            $sql .= " and id>".$_GET["from"];
+            array_push($where, " and id>".$_GET["from"]);
         }
 
         
