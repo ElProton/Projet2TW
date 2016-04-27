@@ -45,7 +45,7 @@
 
             
             $sql .= " ORDER BY date";
-            
+	    
             if(isset($_GET['limit']) && trim($_GET['limit']) != ""){
                 $sql .= " LIMIT ".$_GET["limit"];
             }        
@@ -73,7 +73,7 @@
                     array_push($answer["results"]["events"], array("id" => $datas["id"], "lat" => $datas["latitude"], "lon" => $datas["longitude"], "date" => $datas["date"], "author" => $datas["author"], "title" => $datas["title"]));
                 }while($datas = $req->fetch());
                 
-                $answer["results"]["message"] = $nbOfEvents." events found.";
+                $answer["results"]["message"] = $nbOfEvents." event(s) found.";
             }
         }
         catch (PDOException $e) {
