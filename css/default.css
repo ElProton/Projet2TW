@@ -38,6 +38,7 @@ h1{
 header {
     background-color: rgb(255, 224, 100);
     padding: 10px;
+    height: 10%;
 }
 
 .left {
@@ -58,5 +59,43 @@ header {
     border: 1px solid black;
     padding-left: 5px;
     width: 150px;
-    pargin-left: 10px;
+    margin-left: 10px;
+}
+
+#map-container {
+    width: 50%;
+    height: 600px;
+    float: left;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(50,50,50, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+}
+
+#popup #popup_content {
+    
+    border: 1px solid rgb(30,30,30);
+    border-radius: 15px;
+    background-color: white;
+    width: 35%;
+    height: 70%;
+    margin: auto;
+    margin-top: 7%;
+}
+
+#search {
+    margin-left: 50%;
+}
+
+label { 
+    display: inline-block;
+    width: 210px;
+    text-align: left;
 }
