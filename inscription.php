@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Inscription</title>
     <link id="main_style" type="text/css" rel="stylesheet" href="css/inscription.css" />
+    <script src="js/verifInscription.js"></script>
 
 
 </head>
 <body>
+<?php
+            require("includes/header.php");
+        ?>
+
     <h1>Inscription au service d'évênements</h1>
 
     <form method ='post' action ="inscription.php" onsubmit="return verifForm(this)">

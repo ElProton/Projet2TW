@@ -1,7 +1,7 @@
 <header>
     <?php
         
-        echo "<div class=\"left\"><p>Cre'events</p></div>";
+        echo "<div class=\"left\"><p><a title='Cre'events' href='index.php'>Cre'events</a></p></div>";
         
         echo "<div class=\"right\">";
         
@@ -11,7 +11,7 @@
                 echo "<span class=\"usericon\"> </span><input id=\"username\" type=\"text\"' />";
                 echo "<span class=\"passwordincon\"> </span><input id=\"password\" type=\"password\" />";
                 echo "<button id='connect' type=\"button\">Connexion</button> ";       
-                echo "</form><br/><a href=\"inscription.html\">S'inscrire</a>";
+                echo "</form><br/><a href=\"inscription.php\">S'inscrire</a>";
                      
         }
         else {

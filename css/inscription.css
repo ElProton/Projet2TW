@@ -4,8 +4,8 @@
 }
 
 body{
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/background2.jpg");
+    background-repeat: repeat;
     background-attachment:fixed ;
 }
 
@@ -33,11 +33,26 @@ h1{
 header {
     background-color: rgb(255, 224, 100);
     padding: 10px;
-    height: 10%;
+    height: 25%;
 }
 
 label {
     display: inline-block;
     width: 210px;
     text-align: left;
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+#connection_form input, #connection_form button{
+    border-radius: 10px;
+    height: 20px;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 150px;
+    margin-left: 10px;
 }
