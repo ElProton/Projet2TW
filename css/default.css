@@ -13,28 +13,6 @@ ul{
     list-style: none;
 }
 
-.droite{
-
-}
-
-.gauche{
-    position: absolute;
-    left: 35%;
-    top: 20%;
-
-
-}
-
-h1{
-    position: relative;
-    padding-top: 2%;
-}
-
-.droite{
-    position: relative;
-    padding: 1%;
-}
-
 header {
     background-color: rgb(255, 224, 100);
     padding: 10px;
