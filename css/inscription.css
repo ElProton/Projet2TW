@@ -52,12 +52,15 @@ label {
 
 .left {
     float: left;
-    padding: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
     font-size: 30px;
 }
 
 .right {
     float: right;
+    padding-right: 1%;
+    padding-top: 1%;
 }
 #connection_form input, #connection_form button{
     border-radius: 10px;
@@ -93,4 +96,8 @@ a:hover {
     background-color: rgba(0,0,0,0.2);
     border-style: outset solid;
     border-color: black;
+}
+
+.clear {
+    clear: both;
 }

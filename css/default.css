@@ -1,6 +1,15 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: NewspaperFont;
+}
+
+@font-face {
+
+    font-family: 'NewspaperFont';
+
+    src: url('../fonts/NewspaperFont.ttf');
+
 }
 
 body{
@@ -15,17 +24,20 @@ ul{
 header {
     background-color: rgb(102, 86, 84);
     padding: 10px;
-    height: 10%;
+
 }
 
 .left {
     float: left;
-    padding: 1%;
+    padding-left: 1%;
+    padding-top: 1%;
     font-size: 30px;
 }
 
 .right {
     float: right;
+    padding-right:  1%;
+    padding-top: 1%;
 }
 
 .clear {
