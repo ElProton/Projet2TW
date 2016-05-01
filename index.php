@@ -21,8 +21,8 @@
         <div id="search">
             <h3>Taper vos filtres de recherches</h3>
             <form>
-                <label for="author">Auteur</label><input type="text" name="author" /><br/>
-                <label for="date">Date (format AAA-MM-JJ)</label><input type="date" name="date" />
+                <label for="author">Auteur</label><input class="input" type="text" name="author" /><br/>
+                <label for="date">Date (format AAA-MM-JJ)</label><input class="input" type="date" name="date" />
             </form>
         </div>
         <div class="clear"></div>

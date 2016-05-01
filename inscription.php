@@ -19,20 +19,20 @@
         <ul class="gauche">
             <li>
                 <label> Nom d'utilisateur : </label><br />
-                <input type="text" name="username" maxlength="16" pattern="[A-Za-z0-9].{4,}" placeholder="min:4 max:16" required formnovalidate onblur="verifPseudo()">
+                <input class="input" type="text" name="username" maxlength="16" pattern="[A-Za-z0-9].{4,}" placeholder="min:4 max:16" required formnovalidate onblur="verifPseudo()">
             </li>
             <li>
                 <label> Mot de passe : </label><br />
-                <input id="MDP" type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="min:8 1upper 1lower 1num" required formnovalidate onblur="verifMDP()">
+                <input class="input" id="MDP" type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="min:8 1upper 1lower 1num" required formnovalidate onblur="verifMDP()">
             </li>
             <li>
                 <label> Répéter Mot de passe : </label><br />
-                <input type="password" name="mdp2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Répéter votre mot de passe" required onblur="verifRepetition()">
+                <input class="input" type="password" name="mdp2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Répéter votre mot de passe" required onblur="verifRepetition()">
             </li>
         </ul>
         <div class="droite">
             <label> Description <font size="1" >(facultative)</font> : </label><br />
-            <textarea name="description" rows="8" cols="100" maxlength="2500" placeholder="Votre description..."></textarea><br />
+            <textarea class="input" name="description" rows="8" cols="50" maxlength="2500" placeholder="Votre description..."></textarea><br />
             <input type="submit" name="submit_button" value="S'inscrire">
         </div>
     </form>

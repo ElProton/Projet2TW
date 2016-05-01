@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: NewspaperFont;
 }
 
 @font-face {
@@ -14,7 +15,6 @@
 body{
     background-image: url("../img/background2.jpg");
     background-repeat: repeat;
-    background-attachment:fixed ;
 }
 
 ul{
@@ -24,12 +24,13 @@ ul{
 .droite{
     float: right;
     position: relative;
-    right: 20%;
+    right: 25%;
 
 }
 
 .gauche{
     float: left;
+    margin-left: 2%;
 
 }
 
@@ -86,4 +87,10 @@ a:hover {
 
 #inscrire{
     padding-left: 3%;
+}
+
+.input{
+    background-color: rgba(0,0,0,0.2);
+    border-style: outset solid;
+    border-color: black;
 }
