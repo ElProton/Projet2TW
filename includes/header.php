@@ -11,7 +11,7 @@
                 echo "<span class=\"usericon\"> </span><input id=\"username\" type=\"text\"' />";
                 echo "<span class=\"passwordincon\"> </span><input id=\"password\" type=\"password\" />";
                 echo "<button id='connect' type=\"button\">Connexion</button> ";       
-                echo "</form><br/><a href=\"inscription.php\">S'inscrire</a>";
+                echo "</form><br/><a id=\"inscrire\" href=\"inscription.php\">S'inscrire</a>";
                      
         }
         else {

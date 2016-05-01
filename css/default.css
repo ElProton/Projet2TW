@@ -14,13 +14,15 @@ ul{
 }
 
 header {
-    background-color: rgb(255, 224, 100);
+    background-color: rgb(102, 86, 84);
     padding: 10px;
     height: 10%;
 }
 
 .left {
     float: left;
+    padding: 1%;
+    font-size: 30px;
 }
 
 .right {
@@ -76,4 +78,25 @@ label {
     display: inline-block;
     width: 210px;
     text-align: left;
+}
+
+a:link {
+    color: #100b34;
+    text-decoration: none;
+}
+a:visited {
+    color: #686dad;
+    text-decoration: none;
+}
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #827e83;
+    text-decoration: none;
+}
+
+#inscrire{
+    padding-left: 3%;
 }
