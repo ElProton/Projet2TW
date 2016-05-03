@@ -17,10 +17,10 @@ function connect() {
                 var obj = JSON.parse(answer);
                 
                 if(obj.status == "error") {
-                    document.querySelector("#message").innerHTML = "Erreur :"+obj.message;
+                    document.querySelector("#message_connexion").innerHTML = "Erreur :"+obj.message;
                 }
                 else if(obj.status == "ok") {
-                    document.querySelector("#message").innerHTML = obj.message;
+                    document.querySelector("#message_connexion").innerHTML = obj.message;
                     document.querySelector("header div.right").innerHTML = "<p>Bienvenue "+obj.pseudo+" !</p>";
                 }
             }

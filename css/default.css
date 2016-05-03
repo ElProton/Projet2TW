@@ -12,6 +12,23 @@
 
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    background:#999;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background:#444;
+}		
+
+
 body{
     background-image: url("../img/background2.jpg");
     background-repeat: repeat;
@@ -55,7 +72,7 @@ header {
 
 #map-container {
     width: 50%;
-    height: 600px;
+    height: 500px;
     float: left;
 }
 
@@ -79,6 +96,8 @@ header {
     height: 70%;
     margin: auto;
     margin-top: 7%;
+    padding: 10px;
+    overflow: scroll;
 }
 
 #search {
@@ -117,3 +136,41 @@ a:hover {
     border-style: outset solid;
     border-color: black;
 }
+
+li[id^="page_"] {
+    display: inline-block;
+    margin: 3px;
+    text-align: center;
+    color: #100b34;
+    text-decoration: underline;
+    cursor: pointer;
+}
+li[id^="page_"].active{
+    text-decoration: none;
+    cursor: default;
+}
+
+#results {
+    width: 45%;
+    margin-left: 51%;
+    margin-top: 50px;
+}
+
+#results ul#events_list li{
+    padding: 2px;
+}
+
+#message-search, #events_list {
+    margin-bottom: 15px;
+}
+
+.underline {
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+button[id^="seeevent"] {
+    width: 50px;
+    border-radius: 10px;
+    margin-left: 10px;
+}  

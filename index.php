@@ -8,7 +8,7 @@
         <link type="text/css" rel="stylesheet" href="css/leaflet.css" />
         <script src="js/connexion.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-src.js"></script>
         
     </head>
     <body>
@@ -20,16 +20,19 @@
         </div>
         <div id="search">
             <h3>Taper vos filtres de recherches</h3>
-            <form>
+            <form id="search_form">
                 <label for="author">Auteur</label><input class="input" type="text" name="author" /><br/>
-                <label for="date">Date (format AAA-MM-JJ)</label><input class="input" type="date" name="date" />
+                <label for="date">Date (format AAAA-MM-JJ)</label><input class="input" type="date" name="date" />
             </form>
         </div>
-        <div class="clear"></div>
+        
         
         <div id="results">
-            <span id="message"></span>
-            <ul id="event_list">
+            <span id="message_search"></span>
+            <ul id="events_list">
+            </ul>
+            
+            <ul id="pages">
             </ul>
         </div>
         <div id="popup">
@@ -37,5 +40,7 @@
             
             </div>
         </div>
+        
+        <div class="clear"></div>
     </body>
 </html>

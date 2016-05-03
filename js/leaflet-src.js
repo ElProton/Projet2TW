@@ -3431,7 +3431,7 @@ L.Icon.Default.imagePath = (function () {
 
 		if (matches) {
 			path = src.split(leafletRe)[0];
-			return (path ? path + '/' : '') + 'images';
+			return (path ? path + '/' : '') + 'img';
 		}
 	}
 }());
@@ -8091,7 +8091,7 @@ L.control.zoom = function (options) {
 L.Control.Attribution = L.Control.extend({
 	options: {
 		position: 'bottomright',
-		prefix: '<a href="http://leafletjs.com" title="A js library for interactive maps">Leaflet</a>'
+		prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
 	},
 
 	initialize: function (options) {

@@ -7,7 +7,7 @@
         
         if(!isset($_SESSION['ident'])){
             echo "<form id='connection_form'>";
-            echo "<span id='message'></span>";
+            echo "<span id='message_connexion'></span>";
                 echo "<span class=\"usericon\"> </span><input id=\"username\" type=\"text\"' />";
                 echo "<span class=\"passwordincon\"> </span><input id=\"password\" type=\"password\" />";
                 echo "<button id='connect' type=\"button\">Connexion</button> ";       
