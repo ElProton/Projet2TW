@@ -16,7 +16,7 @@
         }
         else {
             $user = json_decode($_SESSION['ident'], true);
-            echo "<p>Bienvenue ".$user["pseudo"]." ! - <a href=\"logout.php\">Déconnexion</a></p>";
+            echo "<p>Bienvenue <a href=\"profil.php\">".$user["pseudo"]." !</a> - <a href=\"logout.php\">Déconnexion</a></p>";
         }
         
         echo "</div>";

@@ -15,12 +15,14 @@ function init() {
     
     /* On ajoute les évènements de changement de champs */
     var author = document.querySelector("input[name='author']");
-    var date = document.querySelector("input[name='date']");
+    var dateMin = document.querySelector("input[name='dateMin']");
+    var dateMax = document.querySelector("input[name='dateMax']");
     
     allMarkers = [];
     
     author.addEventListener("change", eventsChange);
-    date.addEventListener("change", eventsChange);
+    dateMin.addEventListener("change", eventsChange);
+    dateMax.addEventListener("change", eventsChange);
     map.addEventListener("moveend", eventsChange);
     eventsChange();
     
@@ -74,6 +76,7 @@ function eventsChange() {
                         lon =  obj.results.events[i].lon;
                         lat = obj.results.events[i].lat;
                         id= obj.results.events[i].id;
+                        
                         if(i == start){
                             removeAllMarkers();
                         }
@@ -113,9 +116,11 @@ function eventsChange() {
     var lonMin = Number(map.getBounds().getWest().toFixed(3));
     var lonMax = Number(map.getBounds().getEast().toFixed(3));
     var author = document.querySelector("input[name=\"author\"").value;
-    var date = document.querySelector("input[name=\"date\"").value;
+    var dateMin = document.querySelector("input[name=\"dateMin\"]").value;
+    var dateMax = document.querySelector("input[name=\"dateMax\"]").value;
     
-    xhr.open("GET", "search.php?latMin="+latMin+"&latMax="+latMax+"&lonMin="+lonMin+"&lonMax="+lonMax+"&author="+author+"&date="+date);
+    alert("search.php?latMin="+latMin+"&latMax="+latMax+"&lonMin="+lonMin+"&lonMax="+lonMax+"&author="+author+"&dateMin="+dateMin+"&dateMax="+dateMax);
+    xhr.open("GET", "search.php?latMin="+latMin+"&latMax="+latMax+"&lonMin="+lonMin+"&lonMax="+lonMax+"&author="+author+"&dateMin="+dateMin+"&dateMax="+dateMax);
     xhr.send(null);
     
 }
