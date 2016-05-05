@@ -119,7 +119,6 @@ function eventsChange() {
     var dateMin = document.querySelector("input[name=\"dateMin\"]").value;
     var dateMax = document.querySelector("input[name=\"dateMax\"]").value;
     
-    alert("search.php?latMin="+latMin+"&latMax="+latMax+"&lonMin="+lonMin+"&lonMax="+lonMax+"&author="+author+"&dateMin="+dateMin+"&dateMax="+dateMax);
     xhr.open("GET", "search.php?latMin="+latMin+"&latMax="+latMax+"&lonMin="+lonMin+"&lonMax="+lonMax+"&author="+author+"&dateMin="+dateMin+"&dateMax="+dateMax);
     xhr.send(null);
     
