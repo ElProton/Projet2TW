@@ -7,21 +7,17 @@ function init() {
     
     window.setInterval(hideBG, 15000);
     window.setInterval(changeBG, 16000);
-    window.setInterval(showBG, 16000);
     changeBG();
 }
 
 function changeBG() {
     index += 1;
     document.querySelector("#background").style.backgroundImage = "url('img/"+BGS[index%BGS.length]+"')";
+    document.querySelector("#background").style.opacity = "1";
 }
 
 function hideBG() {
     document.querySelector("#background").style.opacity = "0";
-}
-
-function showBG() {
-    document.querySelector("#background").style.opacity = "1";
 }
 
 window.addEventListener("load", init);
