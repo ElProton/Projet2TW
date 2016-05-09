@@ -2,6 +2,33 @@
     padding: 0px;
     margin: 0px;
     font-family: NewspaperFont;
+    z-index: 5;
+}
+
+html {
+    background-color: black;
+    color: #eee;
+}
+
+#background{ 
+    position: absolute;
+    
+    background-image: url("../img/candle.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    transition: opacity 1s;  
+    
+    width: 100%;
+    height: 100%;
+    
+    top: 0px;
+    left: 0px;
+    
+    z-index: -1;
+    
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
 }
 
 @font-face {
@@ -28,18 +55,12 @@
     background:#444;
 }		
 
-
-body{
-    background-image: url("../img/background2.jpg");
-    background-repeat: repeat;
-}
-
 ul{
     list-style: none;
 }
 
 header {
-    background-color: rgb(102, 86, 84);
+    background-color:  rgba(0,0,0, 0.5);
     padding: 10px;
 
 }
@@ -68,12 +89,18 @@ header {
     padding-left: 5px;
     width: 150px;
     margin-left: 10px;
+    color: black;
 }
 
 #map-container {
-    width: 50%;
-    height: 500px;
+    width: 50vw;
+    height: 80vh;
     float: left;
+    box-shadow: 0px 2px 7px #444444;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    color: black;
 }
 
 #popup {
@@ -85,6 +112,7 @@ header {
     width: 100%;
     height: 100%;
     z-index: 2000;
+    color: black;
 }
 
 #popup #popup_content {
@@ -98,10 +126,26 @@ header {
     margin-top: 7%;
     padding: 10px;
     overflow: scroll;
+    color: black;
 }
 
-#search {
-    margin-left: 50%;
+#search, #results {
+    margin-left: 53%;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    margin-top: 25px;
+}
+
+#search > h3 {
+    padding: 10px 15px 7px 15px; 
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 15px 'Bitter', serif;
+    margin-top: 10px;
+}
+
+#search form{
+    padding: 20px;
 }
 
 label { 
@@ -110,20 +154,20 @@ label {
     text-align: left;
 }
 
-a:link {
-    color: #100b34;
+a:link, li[id^="page_"] {
+    color: #fff;
     text-decoration: none;
 }
 a:visited {
-    color: #686dad;
+    color: #fff;
     text-decoration: none;
 }
 a:active {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
-a:hover {
-    color: #827e83;
+a:hover, li[id^="page_"]:hover {
+    color: #aaa;
     text-decoration: none;
 }
 
@@ -141,19 +185,12 @@ li[id^="page_"] {
     display: inline-block;
     margin: 3px;
     text-align: center;
-    color: #100b34;
     text-decoration: underline;
     cursor: pointer;
 }
 li[id^="page_"].active{
     text-decoration: none;
     cursor: default;
-}
-
-#results {
-    width: 45%;
-    margin-left: 51%;
-    margin-top: 50px;
 }
 
 #results ul#events_list li{
@@ -173,4 +210,12 @@ button[id^="seeevent"] {
     width: 50px;
     border-radius: 10px;
     margin-left: 10px;
+    color: black;
 }  
+
+#pages {
+    text-align: center;
+    
+}
+
+

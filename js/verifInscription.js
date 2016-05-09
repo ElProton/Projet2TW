@@ -69,13 +69,6 @@ function verifMDP(champ)
 
 }
 
-function verifDescription(champ){
-    if(champ.value.length >= 2500){
-        return false;
-    }
-    return true;
-}
-
 function verifRepetition(champ){
     var motDePasse = document.getElementById("MDP");
     if (champ.value == motDePasse.value){
@@ -92,9 +85,8 @@ function verifForm(f)
     var pseudoOk = verifPseudo(f.username);
     var mdpOk = verifMDP(f.mdp);
     var repeatOk = verifRepetition(f.mdp2);
-    var descriptionOK = verifDescription(f.description);
 
-    if(pseudoOk && mdpOk && repeatOk && descriptionOK)
+    if(pseudoOk && mdpOk && repeatOk)
         return true;
 
     else

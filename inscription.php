@@ -32,7 +32,7 @@
         </ul>
         <div class="droite">
             <label> Description <font size="1" >(facultative)</font> : </label><br />
-            <textarea class="input" name="description" rows="8" cols="50" maxlength="2500" placeholder="Votre description..." required onblur="verifDescription()"></textarea><br />
+            <textarea class="input" name="description" rows="8" cols="50" maxlength="2500" placeholder="Votre description..."></textarea><br />
             <input type="submit" name="submit_button" value="S'inscrire">
         </div>
     </form>
