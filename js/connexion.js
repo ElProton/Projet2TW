@@ -21,7 +21,7 @@ function connect() {
                 }
                 else if(obj.status == "ok") {
                     document.querySelector("#message_connexion").innerHTML = obj.message;
-                    document.querySelector("header div.right").innerHTML = "<p>Bienvenue "+obj.pseudo+" !</p>";
+                    document.querySelector("header div.right").innerHTML = "<p>Bienvenue <a href='profil.php'>"+obj.pseudo+" !</a> - <a href='logout.php'>Déconnexion</a></p>";
                 }
             }
         

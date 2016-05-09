@@ -9,10 +9,14 @@
     <script src="js/connexion.js"></script>
     <script src="js/index.js"></script>
     <script src="js/leaflet-src.js"></script>
+    <script src="js/background.js"></script>
 
 </head>
 <body>
 <?php
     require("includes/header.php");
-    require("includes/gestionProfil.php"); ?>
+    echo "<div id=\"background\"></div>";
+    require("includes/gestionProfil.php");
+?>
+
 </body>
