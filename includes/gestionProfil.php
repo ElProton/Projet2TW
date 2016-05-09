@@ -7,9 +7,9 @@ if(!isset($_SESSION['ident'])){
 }
 else{
     $user = json_decode($_SESSION['ident'], true);
-    echo "<div class='gauche'> <ul><li><label>Nom d'utilisateur : </label>".$user['pseudo']."</li>";
-    echo "<li> changer de mot de passe </li></ul></div>";
-    echo "<div class='droite'> <h1>Vos évênements déjà partagés</h1><br /><table>";
+    echo "<div id='gauche'> <ul><li><label>Nom d'utilisateur : </label>".$user['pseudo']."</li>";
+    echo "</div>";
+    echo "<div id='droite'> <h1>Vos évênements déjà partagés</h1><br /><table>";
     echo "<tr><th>id</th><th>titre</th><th>date</th></tr>";
     try{
         $bdd = new PDO($config["sqltype"].":host=".$config["host"].";dbname=".$config["dbname"], $config["username"], $config["password"]);
@@ -27,7 +27,7 @@ else{
         echo "<tr><td>{$ligne['id']}</td><td>{$ligne['title']}</td><td>{$ligne['date']}</td>";
     }
     echo "</table>";
-    echo "<button name='addEventButton' class='addEventButton'></button>";
+    echo "<button name='addEventButton' id='addEventButton'>Ajouter</button>";
 }
 
 ?>

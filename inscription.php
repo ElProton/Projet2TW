@@ -15,7 +15,7 @@
 
     <h1>Inscription au service d'évênements</h1>
 
-    <form method ='post' action ="inscription.php" onsubmit="return verifForm(this)">
+    <form method ='post' action ="traitementInscription.php" onsubmit="return verifForm(this)">
         <ul class="gauche">
             <li>
                 <label> Nom d'utilisateur : </label><br />
