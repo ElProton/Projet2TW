@@ -13,7 +13,7 @@ function init(){
 function initForm() {
     if(!formCreate) {
         var form = document.getElementById("addEventForm");
-        form.setAttribute("action", "traitementAddEvent");
+        form.setAttribute("action", "traitementAddEvent.php");
         form.setAttribute("method", "post");
         /*   Géolocalisation */
         var ul = document.createElement('ul');
@@ -54,6 +54,7 @@ function initForm() {
         input.setAttribute("name", 'titre');
         input.setAttribute("id", "titre");
         input.setAttribute("class", "input");
+        input.setAttribute("placeholder", "max: 40");
         li.appendChild(label);
         li.appendChild(input);
         ul.appendChild(li);

@@ -23,8 +23,7 @@ require("hashUtil.php");
         try {
             $bdd = new PDO($config["sqltype"] . ":host=" . $config["host"] . ";dbname=" . $config["dbname"], $config["username"], $config["password"]);
         } catch (PDOException $e) {
-            $answer["status"] = "error";
-            $answer["results"] = array("message" => $e->getMessage());
+            echo "Erreur survenue : "+$e->getMessage();
         }
         if (trim(strlen($_POST['username'])) >= 4 && trim(strlen($_POST['username'])) <= 16 && trim(strlen($_POST['mdp'])) >= 8) {
             $username = htmlspecialchars(trim($_POST['username']));
