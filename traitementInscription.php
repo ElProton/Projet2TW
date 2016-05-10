@@ -5,12 +5,16 @@
     <title>Bienvenue sur Cre'events !</title>
     <link id="main_style" type="text/css" rel="stylesheet" href="css/default.css" />
     <script src="js/connexion.js"></script>
+    <script src="js/background.js"></script>
 </head>
 <body>
 <?php
 require("includes/header.php");
 require("config.php");
+?>
+<div id="background"></div>
 
+<?php
 if (isset($_POST['username']) && isset($_POST['mdp']) && isset($_POST['mdp2'])) {
     $answer = array();
     try {
@@ -24,11 +28,11 @@ if (isset($_POST['username']) && isset($_POST['mdp']) && isset($_POST['mdp2'])) 
         $password = trim($_POST['mdp']);
         if (isset($_POST['description']) && strlen(trim($_POST['description'])) <= 2500) {
             $description = trim($_POST['description']);
-            $sql = "INSERT INTO users (pseudo,mdp,description) values (username=:username, password=:password, description=:description)";
+            $sql = "INSERT INTO users (pseudo,mdp,description) values (:username, :password, :description)";
             $req = $bdd->prepare($sql);
             $req->execute(array("username" => $username, "password" => $password, "description" => $description));
         } else {
-            $sql = "INSERT INTO users (pseudo,mdp,description) values (username=:username, password=:password)";
+            $sql = "INSERT INTO users (pseudo,mdp,description) values (:username, :password)";
             $req = $bdd->prepare($sql);
             $req->execute(array("username" => $username, "password" => $password));
         }
