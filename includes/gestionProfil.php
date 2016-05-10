@@ -26,8 +26,9 @@ else{
     while($ligne = $req->fetch()){
         echo "<tr><td>{$ligne['id']}</td><td>{$ligne['title']}</td><td>{$ligne['date']}</td>";
     }
-    echo "</table>";
+    echo "</table></div>";
     echo "<button name='addEventButton' id='addEventButton'>Ajouter</button>";
+
 }
 
 ?>

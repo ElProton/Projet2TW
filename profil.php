@@ -13,15 +13,16 @@
     <script src="js/addEvent.js"></script>
 </head>
 <body>
+
+<div id="popup">
+    <button type="reset" id="suppression">X</button>
+    <form id="addEventForm">
+
+    </form>
+</div>
 <?php
     require("includes/header.php");
     echo "<div id=\"background\"></div>";
     require("includes/gestionProfil.php");
 ?>
-
-<div id="popup">
-    <form id="addEventForm">
-
-    </form>
-</div>
 </body>
