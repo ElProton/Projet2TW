@@ -169,10 +169,9 @@ function loadEvent() {
                     
                     if(obj.status == "ok"){
                         var popup = document.getElementById("popup_content");
-                        
-                        popup.innerHTML = "<h1>"+obj.results[0].title+"<h1>";
-                        popup.innerHTML += "<p>"+obj.results[0].text+"<br/><p>";
-                        popup.innerHTML += "<p>Par "+obj.results[0].author+", le "+obj.results[0].date+"<p>";
+                        popup.innerHTML = "<p id=\"eventHeader\">"+obj.results[0].author+" <time id=\"eventTime\" datetime=\""+obj.results[0].date+"\">le "+transformDate(obj.results[0].date)+"</time></p>";
+                        popup.innerHTML += "<h1 id=\"eventTitle\">"+obj.results[0].title+"<h1>";
+                        popup.innerHTML += "<p id=\"eventText\">"+obj.results[0].text+"<br/><p>";
                         
                         document.getElementById("popup").style.display = "block";
                     }
@@ -205,4 +204,10 @@ function removeAllMarkers() {
         map.removeLayer(allMarkers[i]);
     
     allMarkers = [];
+}
+
+function transformDate(date) {
+    var MOUNTH = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    
+    return date.substring(8, 11)+" "+MOUNTH[parseInt(date.substring(6, 9))-1]+" "+date.substring(0, 4);
 }

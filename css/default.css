@@ -35,6 +35,14 @@ html {
 
 @font-face {
 
+    font-family: 'exmouth';
+
+    src: url('../fonts/exmouth.ttf');
+
+}
+
+@font-face {
+
     font-family: 'NewspaperFont';
 
     src: url('../fonts/NewspaperFont.ttf');
@@ -123,7 +131,7 @@ header {
     border-radius: 15px;
     background-color: white;
     width: 35%;
-    height: 70%;
+    max-height: 70%;
     margin: auto;
     margin-top: 7%;
     padding: 10px;
@@ -242,6 +250,18 @@ button[id^="seeevent"] {
     
 }
 
+#register_traitement {
+    text-align: center;
+    margin-top: 40px;   
+}
+
+#register_traitement #reponseInscription {
+    display: inline-block;
+    margin-top: 20px;  
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+}
+
 #form form input, input.input, textarea {
     color: white;
     width: 37%;
@@ -294,4 +314,22 @@ input[id="register"] {
 
 input[id="register"]:active {
     background-color: #3C3B3F;
+}
+
+#eventHeader time {
+    color: grey;
+    font-size: 0.5em;
+}
+
+#eventTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'exmouth', serif;
+    font-size: 5em;
+    text-decoration: underline;
+}
+
+#eventText {
+    padding: 10px 50px;
+    padding-bottom: 30px;
 }

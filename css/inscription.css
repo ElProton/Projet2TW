@@ -1,4 +1,107 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: NewspaperFont;
+}
 
+@font-face {
 
+    font-family: 'NewspaperFont';
 
+    src: url('../fonts/NewspaperFont.ttf');
 
+}
+
+body{
+    background-image: url("../img/background2.jpg");
+    background-repeat: repeat;
+}
+
+ul{
+    list-style: none;
+}
+
+.droite{
+    float: right;
+    position: relative;
+    right: 25%;
+
+}
+
+.gauche{
+    float: left;
+    margin-left: 2%;
+
+}
+
+h1{
+    position: relative;
+    margin: 2%;
+}
+
+header {
+    background-color: rgb(102, 86, 84);
+    padding: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 210px;
+    text-align: left;
+}
+
+.left {
+    float: left;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: 30px;
+}
+
+.right {
+    float: right;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+#connection_form input, #connection_form button{
+    border-radius: 10px;
+    height: 20px;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+a:link {
+    color: #100b34;
+    text-decoration: none;
+}
+a:visited {
+    color: #686dad;
+    text-decoration: none;
+}
+a:active {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #827e83;
+    text-decoration: none;
+}
+
+#inscrire{
+    padding-left: 3%;
+}
+
+.input{
+    background-color: rgba(0,0,0,0.2);
+    border-style: outset solid;
+    border-color: black;
+}
+
+.clear {
+    clear: both;
+}
+
+#inscription {
+    background-color: rgba(0, 0, 0, 0.5);
+}
