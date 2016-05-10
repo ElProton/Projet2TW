@@ -209,5 +209,5 @@ function removeAllMarkers() {
 function transformDate(date) {
     var MOUNTH = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     
-    return date.substring(8, 2)+" "+date.substring(6, 2)+" "+date.substring(0, 4);
+    return date.substring(8, 11)+" "+MOUNTH[parseInt(date.substring(6, 9))-1]+" "+date.substring(0, 4);
 }

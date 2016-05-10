@@ -250,6 +250,18 @@ button[id^="seeevent"] {
     
 }
 
+#register_traitement {
+    text-align: center;
+    margin-top: 40px;   
+}
+
+#register_traitement #reponseInscription {
+    display: inline-block;
+    margin-top: 20px;  
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+}
+
 #form form input, input.input, textarea {
     color: white;
     width: 37%;
@@ -319,4 +331,5 @@ input[id="register"]:active {
 
 #eventText {
     padding: 10px 50px;
+    padding-bottom: 30px;
 }

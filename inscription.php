@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -39,8 +43,13 @@
                 <legend><span class="number">2</span> Votre profil</legend>
                 <label for="desciption"> Description <font size="1" >(facultative)</font> : </label><br />
                 <textarea id="desciption" class="input" name="description" rows="8" cols="50" maxlength="2500" placeholder="Votre description..."></textarea><br />
+                <br/>
+                
+                <label for="captcha">Code de sécurité:</label><br/>
+                <img src="includes/captcha.php" alt="captcha" id="captcha"/><br/>
+                <input class="input" id="captcha" type="text" name="captcha" required="required" placeholder="(Recopier le code ci-dessus)"/><br/><br/>
                 <input id="register" type="submit" name="submit_button" value="S'inscrire">
-            
+                
             </fieldset>
         </form>
     </div>
