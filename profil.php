@@ -10,7 +10,7 @@
     <script src="js/index.js"></script>
     <script src="js/leaflet-src.js"></script>
     <script src="js/background.js"></script>
-
+    <script src="js/addEvent.js"></script>
 </head>
 <body>
 <?php
@@ -19,4 +19,9 @@
     require("includes/gestionProfil.php");
 ?>
 
+<div id="popup">
+    <form id="addEventForm">
+
+    </form>
+</div>
 </body>
