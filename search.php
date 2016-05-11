@@ -24,10 +24,10 @@
         if(isset($_GET["author"]) && trim($_GET['author']) != "") {
             array_push($where, "author='".$_GET["author"]."'");
         }
-        if(isset($_GET["dateMin"]) && trim($_GET['dateMin']) != ""){
+        if(isset($_GET["dateMin"]) && trim($_GET['dateMin']) != "" && strlen($_GET['dateMin']) == 10){
             array_push($where, "date>='".$_GET["dateMin"]."'");
         }
-        if(isset($_GET["dateMax"]) && trim($_GET['dateMax']) != ""){
+        if(isset($_GET["dateMax"]) && trim($_GET['dateMax']) != "" && strlen($_GET['dateMin']) == 10){
             array_push($where, "date<='".$_GET["dateMax"]."'");
         }
         if(isset($_GET["from"]) && trim($_GET["from"]) != ""){
