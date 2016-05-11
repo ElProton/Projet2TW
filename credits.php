@@ -14,7 +14,9 @@
     <?php
         require("includes/header.php");
     ?>
+    <div id="background"></div>
     <div id="credits">
+    <div id="content">
     <ul>
         <li>
             Toutes les images visibles sur le site sont libre de droits. Retrouvez les sur <a href="https://pixabay.com/fr/">Pixabay</a>
@@ -23,11 +25,13 @@
             Bibliothèque <a href="http://leafletjs.com/index.html">Leaflet</a>
         </li>
         <li>
-            Données fournit par <a href="https://donneespubliques.meteofrance.fr/?fond=dossier&id_dossier=1">Météo France</a>
-        </li>
-        <li>
             Le fond de map est fournit par <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>
         </li>
     </ul>
     </div>
+    </div>
+    <?php
+        require("includes/footer.php"); 
+    ?>    
     </body>
+    </html>

@@ -27,3 +27,7 @@
     require("includes/gestionProfil.php");
 ?>
 </body>
+        <?php
+            require("includes/footer.php"); 
+        ?>
+</html>

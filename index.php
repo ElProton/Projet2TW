@@ -44,5 +44,8 @@
         </div>
         
         <div class="clear"></div>
+        <?php
+            require("includes/footer.php"); 
+        ?>
     </body>
 </html>

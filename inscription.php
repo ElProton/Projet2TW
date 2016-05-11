@@ -53,5 +53,8 @@
             </fieldset>
         </form>
     </div>
+        <?php
+            require("includes/footer.php"); 
+        ?>    
 </body>
 </html>

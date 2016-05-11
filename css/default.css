@@ -250,12 +250,12 @@ button[id^="seeevent"] {
     
 }
 
-#register_traitement, #profil {
+#register_traitement, #profil, #credits {
     text-align: center;
     margin-top: 40px;   
 }
 
-#register_traitement #reponseInscription, #profil #content {
+#register_traitement #reponseInscription, #profil #content, #credits #content {
     display: inline-block;
     margin-top: 20px;  
     background-color: rgba(0, 0, 0, 0.5); 
@@ -429,4 +429,14 @@ p.tips#addEventTips {
     color: rgb(100, 30, 80);
     padding: 3px;
     border: 3px solid black;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
