@@ -36,7 +36,7 @@ function hideEvent() {
 function eventsChange() {
     var xhr = new XMLHttpRequest();
     
-    if(this.name == "author" || this.name == "date"){
+    if(this.name == "author" || this.name == "date" || this.id == "map-container"){
         page = 1;
     }
     

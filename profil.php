@@ -7,7 +7,6 @@
     <link id="main_style" type="text/css" rel="stylesheet" href="css/default.css" />
     <link type="text/css" rel="stylesheet" href="css/leaflet.css" />
     <script src="js/connexion.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/leaflet-src.js"></script>
     <script src="js/background.js"></script>
     <script src="js/addEvent.js"></script>
@@ -15,10 +14,12 @@
 <body>
 
 <div id="popup">
-    <button type="reset" id="suppression">X</button>
-    <form id="addEventForm">
+    <div id="popup_content">
+        <button type="reset" id="suppression">X</button>
+        <form id="addEventForm">
 
-    </form>
+        </form>
+    </div>
 </div>
 <?php
     require("includes/header.php");
