@@ -2,6 +2,9 @@ window.addEventListener("load", init);
 var map;
 var marker;
 
+/**
+ * Construct the form in a pop-up when addButton is clicked
+ */
 function init(){    
     initForm();
     marker = null;

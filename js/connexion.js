@@ -1,3 +1,6 @@
+/**
+ * init the listener
+ */
 function init() {
     var button = document.querySelector("#connect");
     
@@ -6,6 +9,9 @@ function init() {
     }
 }
 
+/**
+ * Change the current header when user is connect
+ */
 function connect() {
     var xhr = new XMLHttpRequest();
     var username = document.querySelector("input[id=username]").value;

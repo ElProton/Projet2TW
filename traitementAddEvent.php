@@ -20,6 +20,7 @@ require("hashUtil.php");
 <?php
 echo "<div id=\"profil\">";
 echo "<div id=\"content\">";
+//User is not connect
 if(!isset($_SESSION['ident'])){
     echo "<span class='erreur'> Veuillez vous connectez (en haut à droite) afin d'accéder à votre profil";
 }
@@ -30,12 +31,14 @@ else {
         $jour = intval(trim($_POST['jour']));
         $mois = intval(trim($_POST['mois']));
         $annee = intval(trim($_POST['annee']));
+        //chack all inputs
         if ($latitude >= 0 && $latitude < 360 && $longitude >= 0 && $longitude < 360) {
             if (strlen($_POST['titre']) <= 40) {
                 if (checkdate(intval($mois), intval($jour), intval($annee))) {
                     if (strlen($_POST['description']) <= 1500) {
                         if(hash_equals($_SESSION["aleat_nbr"], crypt($_POST["captcha"], $_SESSION["aleat_nbr"]))){                            
                             $user = json_decode($_SESSION['ident'], true);
+                            //New PDO
                             try {
                                 $bdd = new PDO($config["sqltype"] . ":host=" . $config["host"] . ";dbname=" . $config["dbname"], $config["username"], $config["password"], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
                             } catch (PDOException $e) {
@@ -48,7 +51,8 @@ else {
                             $date = strval($annee)."-".strval($mois)."-".strval($jour);
                             
                             $req = $bdd->prepare("INSERT INTO evenements (latitude,longitude,title,author,text,date) VALUES (:latitude, :longitude, :titre, :username, :description, :date)");
-                            
+
+                            //Try insert the event in the database
                             try {
                                 $req->execute(array("latitude"=>$latitude,
                                                     "longitude"=>$longitude, 

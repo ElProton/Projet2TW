@@ -1,3 +1,8 @@
+/**
+ * Change the input style when isn't correctly filling
+ * @param champ the input
+ * @param erreur boolean. true if not correct
+ */
 function surligne(champ, erreur)
 {
 
@@ -11,6 +16,11 @@ function surligne(champ, erreur)
 
 }
 
+/**
+ * Look if the username input is in the pattern
+ * @param champ username input
+ * @returns {boolean} true if correct
+ */
 function verifPseudo(champ)
 {
 
@@ -33,6 +43,11 @@ function verifPseudo(champ)
     }
 }
 
+/**
+ * Look if the password input is in the pattern
+ * @param champ password input
+ * @returns {boolean} true if correct
+ */
 function verifMDP(champ)
 {
     var isUpper, isLower, isNumber;
@@ -69,6 +84,11 @@ function verifMDP(champ)
 
 }
 
+/**
+ * Look if the password input is in the pattern
+ * @param champ password input
+ * @returns {boolean} true if correct
+ */
 function verifRepetition(champ){
     var motDePasse = document.getElementById("MDP");
     if (champ.value == motDePasse.value){
@@ -80,6 +100,11 @@ function verifRepetition(champ){
     return false;
 }
 
+/**
+ * Look if all inputs are correctly filling
+ * @param f the form
+ * @returns {boolean} true if corrcet
+ */
 function verifForm(f)
 {
     var pseudoOk = verifPseudo(f.username);

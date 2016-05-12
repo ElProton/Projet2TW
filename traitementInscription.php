@@ -20,11 +20,13 @@ require("hashUtil.php");
     <?php
     if (isset($_POST['username']) && isset($_POST['mdp']) && isset($_POST['mdp2'])) {
         $answer = array();
+        //New PDO
         try {
             $bdd = new PDO($config["sqltype"] . ":host=" . $config["host"] . ";dbname=" . $config["dbname"], $config["username"], $config["password"]);
         } catch (PDOException $e) {
             echo "Erreur survenue : "+$e->getMessage();
         }
+        //check inputs
         if (trim(strlen($_POST['username'])) >= 4 && trim(strlen($_POST['username'])) <= 16 && trim(strlen($_POST['mdp'])) >= 8) {
             $username = htmlspecialchars(trim($_POST['username']));
             $password = crypt(trim($_POST['mdp']), aleatSalt());
@@ -33,7 +35,8 @@ require("hashUtil.php");
             $req->execute(array("pseudo" => $username));
             
             $datas = $req->fetch();
-            
+
+            //check if username has already used
             if($datas != NULL) {
                 echo "<span id='reponseInscription'> Ce pseudo est déjà pris. <br/><a href='inscription.php' title='inscription'>Cliquez ici pour retourner à l'inscription </a></span> ";
             }
@@ -41,6 +44,7 @@ require("hashUtil.php");
                 echo "<span id='reponseInscription'>Code de sécurité invalide. <br/><a href='inscription.php' title='inscription'>Cliquez ici pour retourner à l'inscription </a></span> ";
             }
             else {
+                //Insert new user in database
                 if (isset($_POST['description']) && strlen(trim($_POST['description'])) <= 2500) {
                     $description = htmlspecialchars(trim($_POST['description']));
                     $sql = "INSERT INTO users (pseudo,mdp,description) values (:username, :password, :description)";
