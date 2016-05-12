@@ -29,6 +29,9 @@ function init() {
     document.getElementById("popup").addEventListener("click", hideEvent);
 }
 
+/**
+ * Hide popup event
+ */
 function hideEvent() {
     document.getElementById("popup").style.display = "none";
 }
@@ -199,6 +202,9 @@ function addMarker(positionArray, txt)
     return marker;    
 }
 
+/**
+ * Remove all Markers of the map
+ */
 function removeAllMarkers() {
     for(var i = 0 ; i < allMarkers.length ; i++)
         map.removeLayer(allMarkers[i]);

@@ -4,7 +4,8 @@
         echo "<div class=\"left\"><p><a title='Cre'events' href='index.php'>Cre'events</a></p></div>";
         
         echo "<div class=\"right\">";
-        
+
+        //check if is'nt connected and build the connect form
         if(!isset($_SESSION['ident'])){
             echo "<form id='connection_form'>";
             echo "<span id='message_connexion'></span>";

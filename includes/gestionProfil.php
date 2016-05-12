@@ -4,9 +4,11 @@ require("config.php");
 
 echo "<div id=\"profil\">";
 echo "<div id=\"content\">";
+//Check if is connected
 if(!isset($_SESSION['ident'])){
     echo "<span class='erreur'> Veuillez vous connectez (en haut à droite) afin d'accéder à votre profil";
 }
+//Construct the page with his username and envents
 else{
     $user = json_decode($_SESSION['ident'], true);
     echo " <h1>Vos évênements déjà partagés</h1><br />";
