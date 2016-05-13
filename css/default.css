@@ -436,6 +436,6 @@ footer {
     width: 100%;
     text-align: center;
     padding: 5px;
-    position: absolute;
+    position: relative;
     left: 0px;
 }
