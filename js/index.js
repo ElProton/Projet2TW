@@ -21,10 +21,10 @@ function init() {
     allMarkers = []; /* Store all the markers on the map */
     
     /* Add the events when inputs change, and when the user have finished to move the map*/
-    author.addEventListener("change", eventsChange);
-    dateMin.addEventListener("change", eventsChange);
-    dateMax.addEventListener("change", eventsChange);
-    map.addEventListener("moveend", eventsChange);
+    author.addEventListener("change", datasChange);
+    dateMin.addEventListener("change", datasChange);
+    dateMax.addEventListener("change", datasChange);
+    map.addEventListener("moveend", datasChange);
     eventsChange();
     
     document.getElementById("popup").addEventListener("click", hideEvent);
@@ -44,7 +44,10 @@ function hideEvent() {
 function eventsChange() {
     var xhr = new XMLHttpRequest();
     
-    page = 1;
+    if(this.name == "author" || this.name == "date" || this.id == "map-container"){
+        page = 1;
+        console.log("ok");
+    }
     
     xhr.addEventListener("readystatechange", function(){
             if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
@@ -231,4 +234,12 @@ function transformDate(date) {
     var MOUNTH = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     
     return date.substring(8, 11)+" "+MOUNTH[parseInt(date.substring(6, 9))-1]+" "+date.substring(0, 4);
+}
+
+/**
+ * This is launched when the datas change (Author, date, or map bounds)
+ */
+function datasChange() {
+    page = 1;
+    eventsChange();
 }
