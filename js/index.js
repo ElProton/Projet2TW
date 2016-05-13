@@ -44,9 +44,7 @@ function hideEvent() {
 function eventsChange() {
     var xhr = new XMLHttpRequest();
     
-    if(this.name == "author" || this.name == "date" || this.id == "map-container"){
-        page = 1;
-    }
+    page = 1;
     
     xhr.addEventListener("readystatechange", function(){
             if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
