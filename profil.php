@@ -26,8 +26,9 @@
     echo "<div id=\"background\"></div>";
     require("includes/gestionProfil.php");
 ?>
-</body>
+<div class="clear"></div>
         <?php
             require("includes/footer.php"); 
         ?>
+</body>
 </html>
