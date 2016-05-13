@@ -3,12 +3,13 @@ var map;
 var marker;
 
 /**
+ * Initialize the differents events link to adequate buttons and
  * Construct the form in a pop-up when addButton is clicked
  */
 function init(){    
     initForm();
     marker = null;
-    /* On initialise la map */
+    /* Initialize the map */
     map = L.map('map-container').setView([46.46, 2.8125], 4);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '©️ <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -16,11 +17,21 @@ function init(){
     
     var button = document.getElementById("addEventButton");
     var croix = document.getElementById("suppression");
-    button.addEventListener("click", showEvent);
-    croix.addEventListener("click", hideEvent);
-    map.on("click", mapclick);
+    button.addEventListener("click", showEvent); /* Show the form to add an event */
+    croix.addEventListener("click", hideEvent);  /* Hide the form */
+    
+    map.on("click", mapclick); /* Event when users click on the map */
 }
 
+/**
+ * Function launch when user click on the map
+ * 
+ * Remove the marker, if any;
+ * Change the lat and lng in the adequate input;
+ * Add a marker where the user click
+ * 
+ * @param e The objet that launch the event
+ */
 function mapclick(e){
     removeMarker();
     var lat = document.getElementById("latitude");
@@ -33,6 +44,9 @@ function mapclick(e){
     
 }
 
+/**
+ * Remove the marker already on the map
+ */
 function removeMarker() {
     if(marker != null) {
         map.removeLayer(marker);
@@ -46,13 +60,16 @@ function removeMarker() {
   * @param positionArray An array with two elements: x position and y position
   * @param m The Leaflet map
   * @param txt A text to bind to the popup that appear when you click on a marker
-  * @return A marker
   */
 function addMarker(positionArray)
 {
     marker = L.marker(positionArray).addTo(map);
 }
 
+/**
+ * Initialize the form to add an event;
+ * 
+ */
 function initForm() {
         var form = document.getElementById("addEventForm");
         form.setAttribute("action", "traitementAddEvent.php");
@@ -182,12 +199,16 @@ function initForm() {
         form.appendChild(tips);
 }
 
-
-
+/**
+ * Hide the block that allows the user to add an event
+ */
 function hideEvent() {
     document.getElementById("popup").style.display = "none";
 }
 
+/**
+ * Show the block that allows the user to add an event
+ */
 function showEvent() {
     document.getElementById("popup").style.display = "block";
 }

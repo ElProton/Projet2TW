@@ -7,19 +7,20 @@ var allMarkers;
 window.addEventListener("load", init);
 
 function init() {
-    /* On initialise la map */
+    /* Initialize the map */
     map = L.map('map-container').setView([47, 3], 5);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '©️ <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     
-    /* On ajoute les évènements de changement de champs */
+    /* Get the different inputs in the DOM */
     var author = document.querySelector("input[name='author']");
     var dateMin = document.querySelector("input[name='dateMin']");
     var dateMax = document.querySelector("input[name='dateMax']");
     
-    allMarkers = [];
+    allMarkers = []; /* Store all the markers on the map */
     
+    /* Add the events when inputs change, and when the user have finished to move the map*/
     author.addEventListener("change", eventsChange);
     dateMin.addEventListener("change", eventsChange);
     dateMax.addEventListener("change", eventsChange);
@@ -30,12 +31,16 @@ function init() {
 }
 
 /**
- * Hide popup event
+ * Hide the popup
  */
 function hideEvent() {
     document.getElementById("popup").style.display = "none";
 }
 
+/**
+ * When a data is changed, we launch this function to display again in function to the filters
+ * of the user.
+ */
 function eventsChange() {
     var xhr = new XMLHttpRequest();
     
@@ -127,6 +132,9 @@ function eventsChange() {
     
 }
 
+/**
+ * Function launch when the user click to the number of a page under the event list
+ */
 function changePage(){
     var id;
     
@@ -153,6 +161,9 @@ function changePage(){
     }
 }
 
+/**
+ * Put the informations of the event to the popup and show this one
+ */
 function loadEvent() {
     var id;
     try {
@@ -212,6 +223,12 @@ function removeAllMarkers() {
     allMarkers = [];
 }
 
+/**
+ * Transform a date format "AAAA-MM-JJ" in french like "JJ MM YYYY" where MM is in plain text
+ * 
+ * @param date The String date in format "AAAA-MM-JJ"
+ * @return french date like "JJ MM YYYY" where MM is in plain text
+ */
 function transformDate(date) {
     var MOUNTH = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     

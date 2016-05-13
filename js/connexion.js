@@ -1,5 +1,5 @@
 /**
- * init the listener
+ * Initialize the listeners
  */
 function init() {
     var button = document.querySelector("#connect");
@@ -10,7 +10,8 @@ function init() {
 }
 
 /**
- * Change the current header when user is connect
+ * Check if the user's data connection are correct, change the header if they are. 
+ * If not, show the error message.
  */
 function connect() {
     var xhr = new XMLHttpRequest();
@@ -22,9 +23,11 @@ function connect() {
                 var answer = xhr.responseText;
                 var obj = JSON.parse(answer);
                 
+                /* There is an error, we show the message */
                 if(obj.status == "error") {
                     document.querySelector("#message_connexion").innerHTML = "Erreur :"+obj.message;
                 }
+                /* The user is connected, change the header */
                 else if(obj.status == "ok") {
                     document.querySelector("#message_connexion").innerHTML = obj.message;
                     document.querySelector("header div.right").innerHTML = "<p>Bienvenue <a href='profil.php'>"+obj.pseudo+" !</a> - <a href='logout.php'>Déconnexion</a></p>";
